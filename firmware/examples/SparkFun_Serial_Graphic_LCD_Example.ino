@@ -42,8 +42,8 @@ __________________
 //one size LCD, you can omit this information entirely and just use numerical values
 //in place of these variable names.
 
-#define maxX 127//159
-#define maxY 63 //127
+#define maxX 159
+#define maxY 127
 //Each maximum value is one less than the stated value to account for position 0,0
 //Thus, position 127 is actually the 128th pixel.
 
@@ -61,8 +61,11 @@ LCD.setHome();//set the cursor back to 0,0.
 LCD.clearScreen();//clear anything that may have been previously printed ot the screen.
 delay(10);
 
-LCD.printStr("Commence Arduino Demo Mode");
+LCD.printStr("Commence Photon Demo Mode");
 delay(1500);
+
+//This function should only be used if you accidentally changed the baud rate or if you forgot to what rate it was changed.
+//LCD.restoreDefaultBaud();// needs more work for the Photon
 
 //Each of these functions is explained in great detail below.
 helloWorld();
@@ -71,7 +74,7 @@ reverseModeDemo();
 
 backlightDemo();
 
-baudDemo();
+//baudDemo();//need s a little more testing on the Photon
 
 counter();
 
@@ -89,16 +92,15 @@ circleDemo();
 
 eraseDemo();
 
-demoDemo();
+//demoDemo();
 
-//This function should only be used if you accidentally changed the baud rate or if you forgot to what rate it was changed.
-//LCD.restoreDefaultBaud();
+
 }
 //-------------------------------------------------------------------------------------------
 void loop()
 {
 //nothing in loop since we are just running through each demo once
-
+LCD.restoreDefaultBaud();
 }
 //-------------------------------------------------------------------------------------------
 void reverseModeDemo()
@@ -197,7 +199,7 @@ void counter()
 {
 //Prints a simple counter to the LCD.
   LCD.clearScreen();
-  LCD.printStr("Print variable info such as time");
+  LCD.printStr("Print variable info like time");
   delay(2000);
 
   LCD.clearScreen();
