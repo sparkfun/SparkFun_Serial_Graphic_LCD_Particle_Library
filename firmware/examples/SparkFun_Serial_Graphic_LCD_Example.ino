@@ -4,6 +4,8 @@ Joel Bartlett
 SparkFun Electronics
 October 14, 2013
 
+Updated for Partilce on 7-2-15
+
 License:
 This code is beerware: feel free to use it, with or without attribution,
 in your own projects. If you find it helpful, buy me a beer next time you
@@ -13,23 +15,6 @@ This is an example sketch to accompany the Serial Graphic LCD Library.
 This is intended for use with SparkFun's Serial Graphic LCDs: the 128x64 pixel,
 the 160x128 pixel, and the Graphic LCD Serial Backpack. There is no guarantee
 that this code will work on any other LCDs or backpacks.
-
-This code was written with Arduino 1.0.5 (available at arduino.cc) It should
-work with any Arduino IDE version from 1.0 and on. If you are using
-Arduino 0023 or an older version, this will not compile.
-
-Hardware:
-You'll need one of the LCDs mentioned above as well as an Arduino compatible
-board running at 5V, and some jumper wires to connect the two.
-
-Connections are as follows:
-__________________
-Arduino | Backpack|
-________|_________|
-   5V   |  Vin    |
-  GND   |  GND    |
-   TX   |  RX     |
-__________________
 
 ***********************************************************/
 
@@ -100,7 +85,6 @@ eraseDemo();
 void loop()
 {
 //nothing in loop since we are just running through each demo once
-LCD.restoreDefaultBaud();
 }
 //-------------------------------------------------------------------------------------------
 void reverseModeDemo()
