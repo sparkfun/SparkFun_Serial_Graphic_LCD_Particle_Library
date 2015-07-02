@@ -26,7 +26,7 @@ Example Usage
 
 Include the Serial Graphic LCD library:
 
-	#include "SparkFunMPL3115A2.h" // Include the SparkFun MPL3115A2 library
+	#include "SparkFun_Serial_Graphic_LCD.h"
 	
 Initalize and instance of the LCD object:
 	
@@ -40,7 +40,7 @@ Here is a list of the avaialbel functions:
 	void printNum(int num);
 	void nextLine();
 	void clearScreen();
-        void toggleReverseMode();
+	void toggleReverseMode();
 	void toggleSplash();
 	void setBacklight(byte duty);
 	void setBaud(byte baud);
