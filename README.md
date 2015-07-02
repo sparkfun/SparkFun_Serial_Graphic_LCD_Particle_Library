@@ -27,6 +27,33 @@ Example Usage
 Include the Serial Graphic LCD library:
 
 	#include "SparkFunMPL3115A2.h" // Include the SparkFun MPL3115A2 library
+	
+Initalize and instance of the LCD object:
+	
+	//Create an instance of the LCD class named LCD. We will use this instance to call all the
+	//subsequent LCD functions
+	LCD LCD;
+	
+Here is a list of the avaialbel functions:
+
+	void printStr(char Str[78]);
+	void printNum(int num);
+	void nextLine();
+	void clearScreen();
+        void toggleReverseMode();
+	void toggleSplash();
+	void setBacklight(byte duty);
+	void setBaud(byte baud);
+	void restoreDefaultBaud();
+  	void setX(byte posX);
+	void setY(byte posY);
+	void setHome();
+	void demo();
+	void setPixel(byte x, byte y, byte set);
+	void drawLine(byte x1, byte y1, byte x2, byte y2, byte set);
+	void drawBox(byte x1, byte y1, byte x2, byte y2, byte set);
+	void drawCircle(byte x, byte y, byte rad, byte set);
+	void eraseBlock(byte x1, byte y1, byte x2, byte y2);
 
 Recommended Components
 -------------------
