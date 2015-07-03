@@ -17,9 +17,27 @@ class LCD
 {
 	public:
 	LCD();
-	void printStr(char Str[78]);
-	void printNum(int num);
-	void nextLine();
+	void print(char Str[78]);
+	void print(int num);
+	void print(double doub);
+	void print(float flo);
+	void print(byte by);
+	void print(long num);
+	//void print(string str);
+	void print(unsigned int num);
+	void print(unsigned long num);
+
+	void println(char Str[78]);
+	void println(int num);
+	void println(double doub);
+	void println(float flo);
+	void println(byte by);
+	void println(long num);
+	//void println(string str);
+	void println(unsigned int num);
+	void println(unsigned long num);
+	void println();
+
 	void clearScreen();
   void toggleReverseMode();
 	void toggleSplash();
