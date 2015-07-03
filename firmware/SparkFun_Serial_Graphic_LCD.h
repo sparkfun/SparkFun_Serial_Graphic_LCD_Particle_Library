@@ -1,7 +1,7 @@
 /**********************************************
 Graphic Serial LCD Libary Header File
 Joel Bartlett
-SparkFun Electronics 
+SparkFun Electronics
 9-25-13
 
 Updated for the Particle IDE on 7-2-15
@@ -21,12 +21,12 @@ class LCD
 	void printNum(int num);
 	void nextLine();
 	void clearScreen();
-    void toggleReverseMode();
+  void toggleReverseMode();
 	void toggleSplash();
 	void setBacklight(byte duty);
 	void setBaud(byte baud);
 	void restoreDefaultBaud();
-  	void setX(byte posX);
+  void setX(byte posX);
 	void setY(byte posY);
 	void setHome();
 	void demo();
@@ -35,15 +35,13 @@ class LCD
 	void drawBox(byte x1, byte y1, byte x2, byte y2, byte set);
 	void drawCircle(byte x, byte y, byte rad, byte set);
 	void eraseBlock(byte x1, byte y1, byte x2, byte y2);
-	
-	
+
+
 	private:
-    
-    
-    
+
+
+
 
 };
 
 #endif
-
-
